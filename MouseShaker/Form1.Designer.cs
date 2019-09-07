@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnChange = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,21 +44,24 @@
             // 
             // btnChange
             // 
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.ForeColor = System.Drawing.Color.Green;
             this.btnChange.Location = new System.Drawing.Point(179, 65);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(82, 22);
             this.btnChange.TabIndex = 7;
-            this.btnChange.Text = "button1";
+            this.btnChange.Text = "Start";
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.BtnChange_Click);
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(20, 75);
+            this.lblMessage.Location = new System.Drawing.Point(12, 65);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(101, 13);
+            this.lblMessage.Size = new System.Drawing.Size(117, 13);
             this.lblMessage.TabIndex = 6;
-            this.lblMessage.Text = "Mouse Pointer = still";
+            this.lblMessage.Text = "Mouse is NOT Shaking";
             // 
             // groupBox2
             // 
@@ -99,6 +103,17 @@
             this.lblCoordX.TabIndex = 0;
             this.lblCoordX.Text = "0";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,10 +124,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mouse Shaker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
