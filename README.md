@@ -1,7 +1,7 @@
 # MouseShaker
 Little program that keeps your mouse moving.
 
-#####Background:
+##### Background:
 I used to work this crapy company that took advantage of all thier IT staff. Some days when I'd 
 had enough I would call in and say I was working from home. My ninty year old superviser would monitor 
 our online status like a Nazi (yes you Danny). We couldn't turn off the group policy that put your 
